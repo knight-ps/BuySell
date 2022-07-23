@@ -10,7 +10,7 @@ def register(request):
         form = NewUserForm(request.POST)
         if form.is_valid():
             user = form.save()
-            return redirect('users/createprofile')
+            return redirect('/')
 
 
 
@@ -34,7 +34,6 @@ def create_profile(request):
         user = request.user
         profile = Profile(user=user, image=image,contact_number=contact_number)
         profile.save()
-        return render('/')
     return render(request, 'users/createprofile.html')    
 
 
