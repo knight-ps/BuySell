@@ -1,1 +1,1 @@
-web:gunicorn buysell.wsgi
+web:gunicorn mysite.wsgi
